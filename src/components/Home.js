@@ -1,6 +1,9 @@
 import React from "react";
 
-const Home = () => {
+const Home = (props) => {
+  // const handleOnclick = (e) => {
+  //   e.preventDefault({ name: "t-shirt" });
+  // };
   return (
     <div>
       <h1>Buying T-shirt</h1>
@@ -23,7 +26,7 @@ const Home = () => {
           style={{
             width: "40%",
             display: "flex",
-            gap: "20px",
+            gap: "30px",
             border: "1px solid",
           }}
         >
@@ -35,11 +38,12 @@ const Home = () => {
             />
           </div>
           <div>
-            <span>T-shirt</span>
-            <span>Price: 200.00</span>
+            <span>
+              T-shirt Price: <span>$ 200.00 </span>
+            </span>
           </div>
           <div>
-            <button>Add to Cart</button>
+            <button onClick={() => props.addToHandler}>Add to Cart</button>
           </div>
         </div>
       </div>
