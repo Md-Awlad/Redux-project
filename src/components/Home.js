@@ -52,7 +52,7 @@ const Home = (props) => {
           </div>
           <div>
             <span>
-              T-shirt Price: <span>$ 200.00 </span>
+              Price: <span>$ 100 </span>
             </span>
           </div>
           <div>
