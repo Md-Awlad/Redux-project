@@ -1,9 +1,6 @@
 import React from "react";
 
 const Home = (props) => {
-  // const handleOnclick = (e) => {
-  //   e.preventDefault({ name: "t-shirt" });
-  // };
   return (
     <div>
       <h1>Buying T-shirt</h1>
@@ -12,10 +9,26 @@ const Home = (props) => {
           style={{
             width: "100px",
             position: "absolute",
-            right: "10px",
+            right: "5rem",
             top: "5px",
           }}
         >
+          <span
+            style={{
+              position: "absolute",
+              top: "0.5rem",
+              left: "4rem",
+              translate: "middle badge",
+              borderRadius: "50%",
+              backgroundColor: "#ed1aa3",
+              color: "white",
+              width: "33px",
+              height: "33px",
+              fontWeight: "bold",
+            }}
+          >
+            {props.data.length}
+          </span>
           <img
             style={{ width: "100px" }}
             src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5559866.jpg"
@@ -43,7 +56,20 @@ const Home = (props) => {
             </span>
           </div>
           <div>
-            <button onClick={() => props.addToHandler}>Add to Cart</button>
+            <button
+              onClick={() => {
+                props.addToCartHandler();
+              }}
+            >
+              Add to Cart
+            </button>
+            <button
+              onClick={() => {
+                props.removeToCartHandler();
+              }}
+            >
+              Remove to Cart
+            </button>
           </div>
         </div>
       </div>
